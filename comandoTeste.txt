@@ -1,0 +1,12 @@
+python main.py test \
+    --config config.yaml \
+    --ckpt_path /mnt/dados/Translation_Model/SelfRDB/logs/animal_faces/version_0/checkpoints/epoch=49-step=419100.ckpt
+
+
+
+python main.py fit \
+--config config.yaml \
+--trainer.logger.name ERS_seq \
+--data.train_batch_size 1 \
+--data.val_batch_size 4 \
+--trainer.max_epochs 50
